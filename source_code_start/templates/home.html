@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>RP Flask REST API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    {% if config['DEBUG'] %}
+        <pre>
+            <code>
+                {{ config }}
+            </code>
+        </pre>
+
+        <style>
+            pre {
+                white-space: pre-wrap;
+            }
+        </style>
+    {% endif %}
+
     <h1>
         Hello, People!
     </h1>
